@@ -1,0 +1,734 @@
+/* 1. ---General Styles--- */
+
+#mobile-outline {
+    outline: 20px solid #333;
+    max-width: 412px;
+    margin: 20px auto 20px auto;
+    border-radius: 10px;
+  }
+  
+  body {
+    color: #626262;
+    font-family: "Sanchez", "Times New Roman", serif;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  input,
+  textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cr-red {
+    color: #9a2018;
+  }
+  
+  /* Định dạng cơ bản cho Main Nav */
+  #main-nav details {
+    position: relative;
+    width: auto;
+  }
+  
+  #main-nav summary {
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+  }
+  
+  #main-nav summary img {
+    width: 20px; /* Kích thước biểu tượng hamburger */
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease; /* Hiệu ứng khi menu được mở */
+  }
+  
+  #main-nav details[open] summary img {
+    transform: rotate(90deg); /* Xoay biểu tượng khi mở menu */
+  }
+  
+  #burger-con {
+    display: none; /* Ẩn menu mặc định */
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0; /* Căn trái thay vì căn phải */
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+  }
+  
+  #main-nav details[open] #burger-con {
+    display: flex; /* Hiển thị menu khi mở */
+  }
+  
+  #main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Đảm bảo nội dung cũng được căn trái */
+  }
+  
+  #main-nav ul li {
+    border-bottom: 1px solid #efefef;
+  }
+  
+  #main-nav ul li:first-child {
+    border-top: 1px solid #efefef;
+  }
+  
+  #main-nav ul li a {
+    display: block;
+    padding: 10px 0;
+    text-align: left; /* Căn trái từng mục */
+    color: #626262;
+    transition: color 0.3s ease;
+  }
+  
+  #main-nav ul li a:hover {
+    color: #9a2018;
+  }
+  
+  #logo {
+    margin-bottom: 20px;
+    max-width: 382px;
+  }
+  
+  /* 3. ---Main Hero Image--- */
+  
+  #hero {
+    background: url(../images/spa_services.png) no-repeat;
+    height: 200px;
+    width: 412px;
+    background-size: cover;
+    background-position: center; 
+  }
+  
+  .book-now {
+    background-color: #9a2018;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 500ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    cursor: pointer;
+  }
+  
+  .book-now:hover {
+    background-color: rgb(196, 28, 28);
+  }
+  
+  #book-now-hero {
+    height: 67px;
+  }
+  
+  #hero-heading-box {
+    align-self: end;
+  }
+  
+  .hero-img-h2,
+  .hero-img-h3 {
+    position: relative;
+    background: #fff;
+    padding: 10px 15px;
+    font-size: 18px;
+    top: 5px;
+  }
+  .videolake{
+    max-width: 100%;
+    height: auto;
+  }
+  .landscape-container {
+    text-align: center;  /* Centraliza a imagem e a legenda */
+    display: inline-block;  /* Garante que o conteúdo fique na mesma linha */
+  }
+  
+  .landscape-image {
+    width: 100%;  /* Ajuste do tamanho da imagem */
+    max-width: 400px;  /* Limita a largura máxima da imagem */
+    height: auto;  /* Mantém a proporção da imagem */
+    display: block;  /* Garante que a imagem seja tratada como um bloco e não tenha espaços embaixo */
+    margin-bottom: 0;  /* Remove qualquer margem na parte inferior da imagem */
+  }
+  
+  .image-caption {
+    font-size: 14px;  /* Tamanho da fonte para a legenda */
+    color: white;  /* Cor do texto da legenda */
+    background-color: #9a2018;  /* Cor de fundo vermelha para a legenda */
+    padding: 5px;  /* Espaçamento interno da legenda */
+    margin-top: 0;  /* Remove qualquer margem acima da legenda */
+    margin-bottom: 0;  /* Remove qualquer margem abaixo da legenda */
+  }
+  
+  .card-container {
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin: 0 auto; /* Centraliza o contêiner na tela */
+    padding: 20px; /* Espaçamento interno opcional */
+  }
+  
+  /* Estilos para os cards */
+  .card {
+    width: 80px;
+    height: 120px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 1px;
+  }
+  
+
+  .hero-img-h2 span,
+  .hero-img-h3 span {
+    color: #9a2018;
+    font-size: 12px;
+  }
+  
+  .line-separator {
+    margin-top: 20px;
+    border-top: solid 3px #cf6666;
+    padding-top: 20px;
+  }
+  .line-separator4 {
+    margin-top: 20px;
+    border-top: solid 3px #cf6666;
+    padding-top: 20px;
+    position: relative;
+    right: 400px;
+  }
+  .line-separator3{
+    margin-top: 20px;
+    border-top: solid 3px #cf6666;
+    padding-top: 20px;
+    position: relative;
+    bottom: 10px;
+  }
+
+  #title{
+    margin-bottom: 10px
+  }
+  
+  #hero-summary p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  #hero-summary2  {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    position: relative;
+    right: 40px;
+  }
+  
+  #happyfamily{
+    width: 50%;
+  }
+  #happyfamily2{
+    width: 50%;
+  }
+  
+  .fas {
+    font-size: 42px;
+    color: #9a2018;
+    margin: 0 auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .fa-mobile-alt {
+    margin-bottom: 0;
+  }
+  
+  .fa-map-marker-alt {
+    margin-bottom: 0;
+  }
+  
+  #contact {
+    font-size: 11px;
+    background-color: #efefef;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  #contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  #contact .fas {
+    font-size: 42px;
+    color: #9a2018;
+    margin-right: 10px;
+    margin-bottom: 0;
+    display: inline-flex;
+  }
+
+  #faq-con {
+    background-color: #f4f4f4;
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+  
+  #faq-con h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #faq-con h2 span {
+    color: #9a2018;
+    font-size: 16px;
+  }
+  
+  .faq-items {
+    margin-bottom: 16px;
+  }
+  
+  .faq-items h3 {
+    background: #e8e7e7;
+    padding: 16px;
+    font-size: 16px;
+  }
+  
+  .faq-items ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .faq-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid #9a2018;
+  }
+  
+  .faq-items a {
+    color: inherit;
+    font-size: 13px;
+  }
+  
+  #faq-text-con {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+/* Container for the cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 30px; /* Increase space between cards */
+    margin: 20px;
+  }
+  
+  /* Styles for each card */
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 200px; /* Limit the maximum width of the cards */
+    height: 380px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+  }
+  
+  /* Image inside the card */
+  .card-img {
+    width: 100%;
+    height: 180px; /* Increase the height of the images */
+    object-fit: cover; /* Ensures image covers the space without distortion */
+  }
+  
+  /* Text inside the card */
+  .card-text h3 {
+    margin-top: 10px;
+    font-size: 20px; /* Increased font size for the title */
+    margin-bottom: 10px;
+    color:  #626262; /* Changed the text color to black */
+  }
+  
+  .card-text h3 {
+    font-size: 20px; /* Increased font size for the title */
+    margin-bottom: 10px;
+  }
+  
+  .card-text p {
+    font-size: 16px; /* Larger font for the description */
+    margin-bottom: 20px;
+    color:  #626262;
+  }
+  
+  /* Button style */
+  .view-btn {
+    background-color: #9a2018; /* Red button */
+    color: #fff;
+    border: none;
+    padding: 8px 15px; /* Increased padding for the button */
+    font-size: 18px; /* Larger text on the button */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+  }
+  
+  .view-btn:hover {
+    background-color: #b83b2b; /* Darker red on hover */
+  }
+  
+  
+  #packages-nav {
+    padding-top: 20px;
+  }
+  
+  #packages-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #packages-nav ul li {
+    margin-bottom: 15px;
+  }
+  
+  #packages-nav ul li a {
+    color: inherit;
+    padding: 5px;
+  }
+  
+  #packages-nav ul li a.selected {
+    border-left: #9a2018 5px solid;
+  }
+  
+  #packages-nav ul li a:hover {
+    border-left: #9a2018 5px solid;
+  }
+  
+  #packages-hero-con {
+    background: url(../images/spa_prizes.png) no-repeat;
+    height: 200px;
+    width: 412px;
+    background-size: cover;
+    background-position: center; 
+
+  }
+  #packages-hero-con2
+  {
+    background: url(../images/spa_room.png) no-repeat;
+    height: 200px;
+    width: 412px;
+    background-size: cover;
+    background-position: center; 
+    position: relative;
+    right: 83px;
+  }
+  #packages-heading-box {
+    align-self: end;
+  }
+
+  #packages-heading-box1 {
+    align-self: end;
+  }
+
+  
+  
+  .packages-image {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
+  .packages-image-con h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .packages-image-con p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    line-height: 20px;
+  }
+  
+  .packages-image-con a {
+    color: #707070;
+    font-size: 12px;
+  }
+  
+  #packages-bottom-nav {
+    background-color: #cf6666;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  #packages-bottom-nav ol {
+    list-style-type: none;
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+  
+  #packages-bottom-nav ol li {
+    display: inline;
+  }
+  
+  #packages-bottom-nav ol li a {
+    padding: 5px;
+    color: #fff;
+  }
+  
+  /* 6. ---algonquin & FAQ--- */
+  
+  #algonquin-hero {
+    background: url(../images/algonquin_galeairy.png) no-repeat;
+    height: 195px;
+  }
+  
+  /* Centralizar o texto e a imagem */
+  .forest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* Zera o espaço entre os itens */
+  }
+  
+  
+  /* O texto com fundo vermelho */
+  .lake {
+    margin-top: 5px;
+    background-color: #9a2018;
+    color: white;
+    padding: 0; /* Zera o padding para não interferir no tamanho */
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0; /* Zera qualquer margem à direita */
+    line-height: 1; /* Zera o espaçamento entre as linhas do texto */
+  }
+  
+  #lake-description{
+    font-size: 4%;
+    text-align: center;
+    font-family: "Sanchez", "Times New Roman", serif;
+  }
+  
+  /* Imagem ao lado do texto */
+  .frozen-lake img {
+    margin-top: 9.4px;
+    width: 200px;  /* Definindo a mesma largura do quadrado */
+    height: 200px; /* Definindo a mesma altura do quadrado */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    margin-left: 0; /* Zera qualquer margem à esquerda */
+  }
+  #algonquin-hero-heading-box {
+    align-self: end;
+  }
+  
+  #algonquin-us-text {
+    padding-bottom: 60px;
+  }
+  
+  #algonquin-us-text p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    line-height: 22px;
+    margin: 10px;
+  }
+  
+  #algonquin-us-text-column2 {
+    font-style: italic;
+  }
+  
+  /* Contêiner com a imagem à esquerda e o texto à direita */
+  .peaceful-river-container {
+    display: flex; /* Ativa o flexbox */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    gap: 0; /* Remove qualquer espaçamento entre a imagem e o texto */
+  }
+  
+  /* Imagem à esquerda */
+  .peaceful-river-img img {
+    margin-top: 9.8px;
+    width: 200px;  /* Largura da imagem */
+    height: 200px; /* Altura da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    margin-left: 0;
+    margin-right: 0; /* Remove qualquer margem à direita da imagem */
+  }
+  
+  /* Texto com fundo vermelho à direita */
+  .peaceful-river-text {
+    background-color: #9a2018;
+    color: white;
+    width: 300px;  /* Largura do quadrado de texto */
+    height: 200px; /* Altura do quadrado de texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 5px;
+    line-height: 1;
+    margin-left: 0; /* Remove qualquer margem à esquerda do quadrado de texto */
+  }
+  
+  /* Estilo do texto dentro do quadrado */
+  #peaceful-river-description {
+    font-size: 4%;
+    text-align: center;
+    font-family: "Sanchez", "Times New Roman", serif;
+  }
+
+/* 7. ---Contact--- */
+#contact-hero-form {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+}
+
+
+#contact-hero-con {
+  background: url(../images/contact-hero.jpg);
+  height: 95px;
+}
+
+#contact-hero-heading-box {
+  align-self: end;
+}
+
+#contact-hero-text {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+#contact-hero-address p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#contact-hero-address {
+  margin-bottom: 30px;
+}
+
+#contact-hero-address h3 {
+  margin-bottom: 25px;
+}
+
+#contact-hero-form form {
+  display: flex;
+  flex-direction: column;
+  width: 412px;
+
+}
+
+#contact-hero-form input,
+textarea {
+  padding: 20px;
+  border: 2px solid #d6d6d6;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  width: auto;
+  font: inherit;
+}
+
+#contact-hero-form textarea {
+  height: 20%;
+}
+
+#contact-hero-form input[type="submit"] {
+  padding: 20px;
+  background-color: #9a2018;
+  color: #fff;
+  border: none;
+  width: 150px;
+  align-self: flex-end;
+}
+
+#contact-hero-form input[type="submit"]:hover {
+  background-color: #626262;
+  border-radius: 3px;
+  transition: all 200ms ease-in;
+}
+  /* 8. ---Footer--- */
+  
+/* Footer Section Styling */
+
+#footer-hero {
+  grid-column: 1 / -1; /* Ensures it spans the full grid width */
+  background-image: url(../images/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-size: 12px;
+  max-width: 412px; /* Match the width of the hero image */
+  margin: 0 auto; /* Centers the footer */
+  padding: 40px 20px; /* Adds vertical and horizontal spacing */
+  text-align: left;
+}
+
+#footer-contact-info h3 {
+  font-size: 23px;
+  margin-bottom: 16px;
+}
+
+#footer-contact-info p {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 11px;
+}
+
+#footer-privacy {
+  margin-top: 20px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.line-separator {
+  margin: 20px auto;
+  max-width: 380px; /* Aligns the separator width with the content */
+}
+
+#price-policy {
+  margin-top: 20px;
+}
+  
+  #price-policy{
+    position: relative;
+    right: 5px;
+  }
+  
