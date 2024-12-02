@@ -1,0 +1,406 @@
+/* General Styles */
+body {
+    font-family: 'Sanchez', 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    background-color: #f9f6f1;
+    line-height: 1.8;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+   
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  
+  }
+  h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #9a2018;
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #9a2018, #c7352b);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    max-width: 150px;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+  }
+  
+  .hamburger-menu summary {
+    font-size: 26px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger-menu summary:hover {
+    color: #f8e2e2;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    left: 0;
+    top: 40px;
+    z-index: 10;
+    width: 250px;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .hamburger-menu[open] .nav-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-menu li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu li:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    color: #9a2018;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to bottom, rgba(154, 32, 24, 0.85), rgba(0, 0, 0, 0.7)), url('../images/background_image.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideIn 1s ease;
+  }
+  
+  .hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease;
+  }
+  
+  .hero-button {
+    background: #f0a500;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    animation: bounce 2s infinite;
+  }
+  
+  .hero-button:hover {
+    background-color: #f77f00;
+    transform: scale(1.1);
+  }
+  
+  /* About Section */
+  .about {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-left: 5px solid #9a2018;
+    border-radius: 8px;
+  }
+  
+  .about p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .completed {
+    font-style: italic;
+    font-weight: bold;
+    color: #9a2018;
+    position: relative;
+  }
+  
+  .completed::after {
+    content: "✔";
+    font-size: 20px;
+    color: #9a2018;
+    margin-left: 10px;
+  }
+  
+  /* Features Section */
+  .features {
+    background: #f8f8f8;
+    padding: 40px 20px;
+  }
+  
+  .features .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .features .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .features .card i {
+    font-size: 36px;
+    color: #f77f00;
+    margin-bottom: 15px;
+  }
+  
+  .features .card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .features .card p {
+    font-size: 16px;
+  }
+  
+  .features .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Interesting Facts Section */
+  .interesting-facts {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-left: 5px solid #9a2018;
+    border-radius: 8px;
+  }
+  
+  .interesting-facts ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .interesting-facts li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .interesting-facts li::before {
+    content: "★";
+    color: #f0a500;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    margin: 20px 0;
+  }
+  
+  .contact label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #9a2018;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    background: #f77f00;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .contact button:hover {
+    background-color: #f0a500;
+    transform: scale(1.1);
+  }
+  .footer {
+    background-color: #9a2018; /* Romantic deep red */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Sanchez', serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 14px;
+  }
+  
+  .footer-contact h4,
+  .footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact p,
+  .footer-social p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  .footer-social li a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social li a:hover {
+    color: #f4b400; /* Romantic gold highlight */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  
+  .footer-bottom a {
+    color: #f4b400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-bottom a:hover {
+    color: #fff;
+  }
+  
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
